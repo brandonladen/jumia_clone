@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+   background-color: pink;
+}
+
+.product-category{
+    display: flex;
+    flex-direction: row;
+    align-items:self-start;
+    justify-content: space-between;
+    height: 300px;
+    margin-top: 20px;
+}
+.product-category-list{
+    border: 1px solid gainsboro;
+    border-radius: 3px;
+    padding-left: 35px;
+    padding-right: 15px;
+    padding-top: 5px;
+    background-color: white;
+    margin-right: 10px;
+}
+.product-category-list a{
+    text-decoration: none;
+    list-style-type: none;
+    color: black;
+    
+}
+.product-contact{
+    font-size: 15px;
+    margin-left: 10px;
+}
+.contact-help{
+    max-width: 180px;
+    line-height: 10px;
+    border: 1px solid white;
+    border: none;
+    border-radius: 8px;
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    max-width: 200px;
+}
+@media only screen and (max-width:768px){
+    .product-category{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    #product-recommendation{
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+}
+
+.product-body{
+   margin-top: 250px;
+}
+.card{
+    margin-bottom: 20px;
+}
+.product-card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+@media only screen and (max-width){
+    .product-phone{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+.card-image {
+    width: 150px;
+}
+.card-header{
+    color: black;
+    background-color: lightblue;
+    font-weight: bolder;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.card-link a{
+    text-decoration: none;
+    list-style-type: none;
+    color: black;
+}
+
+.product:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+.product{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.recommendations-card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
