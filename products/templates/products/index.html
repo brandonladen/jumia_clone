@@ -78,67 +78,30 @@
 
         <div class="product-body">
             <div class="card">
-                <div class="card-header">
-                    <div class="card-header-text">
-                        Top Deals on Phones
-                    </div>
-
-                    <div class="card-link">
-                        <a href="#">See more ></a>
-                    </div>
-                    
-                </div>
-                <div class="card-body">
-                  
-                    <div class="product-card">
-                        <div class="product">
-                            <img class="card-image" src="static/assets/images/products/1.jpg" alt="">
-                            <div class="prod-desc">
-                                <p>Tecno Spark 10 5G</p>
-                                <p><b>Ksh. 18,999</b></p>
-                            </div>
-                          </div>
-        
-                          <div class="product">
-                            <img class="card-image" src="static/assets/images/products/1.jpg" alt="">
-                            <div class="prod-desc">
-                                <p>Infinix Note 30 4G</p>
-                                <p><b>Ksh. 24,199</b></p>
-                            </div>
-                          </div>
-
-                          <div class="product">
-                            <img class="card-image" src="static/assets/images/products/1.jpg" alt="">
-                            <div class="prod-desc">
-                                <p>Nokia C32 64GB </p>
-                                <p><b>Ksh. 16,999</b></p>
-                            </div>
-                          </div>
-
-                          <div class="product">
-                            <img class="card-image" src="static/assets/images/products/1.jpg" alt="">
-                            <div class="prod-desc">
-                                <p>Infinix Smart 7 HD</p>
-                                <p><b>Ksh. 12,249</b></p>
-                            </div>
-                          </div>
-        
-                          <div class="product">
-                            <img class="card-image" src="static/assets/images/products/1.jpg" alt="">
-                            <p>Infinix Hot 40i</p>
-                            <p><b>Ksh. 16,599</b></p>
-                          </div>
-        
-                          <div class="product">
-                            <img class="card-image" src="static/assets/images/products/1.jpg" alt="">
-                            <p>Itel A70 6.6``</p>
-                            <p><b>Ksh. 10,999</b></p>
-                          </div>
+                {% for item in products %}
+                {% ifchanged item.Category %}
+                    <div class="card-header">
+                        <div class="card-header-text">
+                            Top Deals on {{item.Category}}
+                        </div>
+                        <div class="card-link">
+                            <a href="#">See more ></a>
                         </div>
                     </div>
-                 
-                
+                {% endifchanged %}
+        
+                <div class="card-body">
+                    <div class="product-card">
+                        <div class="product">
+                            <img class="card-image" src="{{item.display_img}}" alt="">
+                            <div class="prod-desc">
+                                <p>{{item.Prod_Name}}</p>
+                                <p><b>Ksh.{{ item.Pod_Price}}</b></p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+            {% endfor %}
             </div>
             
 
