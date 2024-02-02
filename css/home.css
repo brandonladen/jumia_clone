@@ -103,3 +103,8 @@ body{
     padding-left: 15px;
     padding-right: 15px;
 }
+.recommendations-card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
