@@ -1,13 +1,9 @@
 from django.shortcuts import render, redirect
 from .models import Customer
 from .forms import CustomerCreationForm, CustomerLoginForm
-<<<<<<< HEAD
 from django.contrib.auth import login,logout,authenticate
 from django.contrib import messages
 from django.urls import reverse
-=======
-
->>>>>>> 551d400e03ef6fecc0579338f022f732a421014f
 
 # Create your views here.
 def Customer_signUp(request):
@@ -26,7 +22,7 @@ def Customer_signUp(request):
         
 
 def Customer_login(request):
-<<<<<<< HEAD
+
     if request.method == 'POST':
         form = CustomerLoginForm(request.POST)
         if form.is_valid():
@@ -48,14 +44,3 @@ def logout_user(request):
     logout(request)
     messages.success(request, 'Successfully logged out.')
     return redirect('login')
-=======
-    if request.method == "POST":
-        form = CustomerLoginForm(request.POST)
-        if form.is_valid():
-           username = form.cleaned_data['username']
-           password2= form.cleaned_data['password2']
-           user = authenticate(request,username=username,password2=password2)
-           if user is not None:
-               login(request,user)
-               messages.success(request,'succss')
->>>>>>> 551d400e03ef6fecc0579338f022f732a421014f
