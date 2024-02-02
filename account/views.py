@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Customer
-from .forms import CustomerCreationForm
+from .forms import CustomerCreationForm, CustomerLoginForm
+
 
 # Create your views here.
 def Customer_signUp(request):
@@ -19,4 +20,12 @@ def Customer_signUp(request):
         
 
 def Customer_login(request):
-    pass
+    if request.method == "POST":
+        form = CustomerLoginForm(request.POST)
+        if form.is_valid():
+           username = form.cleaned_data['username']
+           password2= form.cleaned_data['password2']
+           user = authenticate(request,username=username,password2=password2)
+           if user is not None:
+               login(request,user)
+               messages.success(request,'succss')

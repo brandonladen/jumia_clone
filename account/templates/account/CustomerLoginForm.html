@@ -17,11 +17,11 @@
 
     <div class="row justify-content-center">
         <div class="col-md-6">
-            <h2>Create an account</h2>
-            <form method="post" action="{% url 'sighnup' %}">
+            <h2>LOgin</h2>
+            <form method="post" action="{% url 'login' %}">
                 {% csrf_token %}
                 {{ form.as_p }}
-                <button type="submit" class="btn btn-primary">Sign up</button>
+                <button type="submit" class="btn btn-primary">Login</button>
             </form>
         </div>
     </div>
