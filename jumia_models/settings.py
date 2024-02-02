@@ -56,7 +56,7 @@ ROOT_URLCONF = 'jumia_models.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -80,7 +80,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'jumia_clone',
         'USER': 'root',
-        'PASSWORD': '***********',
+        'PASSWORD': '*********',
         'HOST': 'localhost',
         'PORT': '3306',        
     }

@@ -1,3 +1,11 @@
 from django.shortcuts import render
-
+from .models import Prod_Category, Product, Order
 # Create your views here.
+
+def home(request):
+    products = Product.objects.all()
+    context = {
+        'products': products
+    }
+    
+    return render(request, "path to html file", context)
