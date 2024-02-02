@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
+    <title>Login</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -14,18 +14,18 @@
             background-color: #f8f9fa;
         }
 
-        .signup-container {
+        .login-container {
             margin-top: 50px;
         }
 
-        .signup-form {
+        .login-form {
             background-color: #ffffff;
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        .signup-form h2 {
+        .login-form h2 {
             text-align: center;
             margin-bottom: 30px;
         }
@@ -34,19 +34,19 @@
             margin-bottom: 20px;
         }
 
-        .btn-signup {
+        .btn-login {
             width: 100%;
         }
     </style>
 </head>
 <body>
 
-    <div class="container signup-container">
+    <div class="container login-container">
         <div class="row justify-content-center">
             <div class="col-md-6">
-                <form class="signup-form" method="post" action="{% url 'signup' %}">
+                <form class="login-form" method="post" action="{% url 'login' %}">
                     {% csrf_token %}
-                    <h2>Create an account</h2>
+                    <h2>Login</h2>
                     
                     <div class="form-group">
                         {{ form.username.label_tag }}
@@ -54,26 +54,11 @@
                     </div>
                     
                     <div class="form-group">
-                        {{ form.first_name.label_tag }}
-                        {{ form.first_name }}
-                    </div>
-                    
-                    <div class="form-group">
-                        {{ form.last_name.label_tag }}
-                        {{ form.last_name }}
-                    </div>
-                    
-                    <div class="form-group">
-                        {{ form.password1.label_tag }}
-                        {{ form.password1 }}
-                    </div>
-                    
-                    <div class="form-group">
-                        {{ form.password2.label_tag }}
-                        {{ form.password2 }}
+                        {{ form.password.label_tag }}
+                        {{ form.password }}
                     </div>
 
-                    <button type="submit" class="btn btn-primary btn-signup">Sign up</button>
+                    <button type="submit" class="btn btn-primary btn-login">Login</button>
                 </form>
             </div>
         </div>
