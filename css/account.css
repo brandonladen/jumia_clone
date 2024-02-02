@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+.account-top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.account-pages{         
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 22px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    background-color: white;
+    border-radius: .5rem;
+    box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.1);
+}
+.account-pages a{
+    color: black;
+    list-style-type: none;
+    text-decoration: none;
+   
+}
+.account-pages-top{
+    margin-bottom: 15px;
+}
+.account-pages-top p{
+    padding: 10px;
+    margin: 0;
+    padding-left: 20px;
+    padding-right: 100px;
+}
+.account-pages-top p:hover{
+    background-color:rgb(240, 240, 240);
+    transition: 0.7s;
+}
+.account-pages .bi{
+    padding-right: 15px;
+    font-weight: 50px;
+    
+}
+.account-pages-bottom a{
+    color: gold;
+    font-weight: bold;
+}
+.account-overview{
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20px;
+    position: relative;
+    bottom: 50px;
+    border-radius: .5rem;
+    background-color: white;
+    padding: 20px;
+}
+.account-overview-top{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+
+.addount-overview-top,
+.account-overview-bottom {
+    display: flex;   
+}
+.account-pages-bottom a:hover{
+    opacity: 0.4;
+    transition: 0.7s;
+}
+
+.account-overview .card {
+    width: 20rem;
+    background-color: white;
+    padding-left: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.card-body h5{
+   color: gold;
+}
+
+.card-body a{
+    color: grey;
+    list-style-type: none;
+    text-decoration: none;
+    font-size: smaller;
+}
+.card-body a:hover{
+    transition: 0.8s;
+    opacity: 0.3;
+}
