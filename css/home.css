@@ -85,6 +85,14 @@ body{
     color: black;
     background-color: lightblue;
     font-weight: bolder;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.card-link a{
+    text-decoration: none;
+    list-style-type: none;
+    color: black;
 }
 
 .product:hover{
