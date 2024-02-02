@@ -8,4 +8,4 @@ def home(request):
         'products': products
     }
     
-    return render(request, "path to html file", context)
+    return render(request, "products/test_home.html", context)
