@@ -83,7 +83,7 @@
             
                         <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
                             <div class="card">
-                                <img class="card-img-top" style="width:100px; height: 100px" src="{{item.display_img}}" alt="{{item.Prod_Name}}">
+                                <img class="card-img-top" style="width:200px; height: 200px" src="{{item.display_img}}" alt="{{item.Prod_Name}}">
                                 <div class="card-body">
                                     <h5 class="card-title">{{item.Prod_Name}}</h5>
                                     <p class="card-text"><b>Ksh.{{item.Pod_Price}}</b></p>
@@ -110,15 +110,18 @@
                 <div class="card-body">
                   
                     <div class="product-card">
-                        {% for products_all in products_all %}
-                        <div class="product">
-                            <img class="card-image" src="{{products_all.display_img}}" alt="">   
-                            <div class="prod-desc">
-                                <p>{{products_all.Prod_Name}}</p>
-                            </div>                         
-                        </div>
-                          {% endfor %}
-                        </div>
+                        {% for product in products_all %}
+                            {% if forloop.counter <= 7 %}
+                                <div class="product">
+                                    <img class="card-image" src="{{ product.display_img }}" alt="">   
+                                    <div class="prod-desc">
+                                        <p>{{ product.Prod_Name }}</p>
+                                    </div>                         
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                    
 
                     </div>
                  
