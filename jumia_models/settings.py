@@ -81,7 +81,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'jumia_clone',
         'USER': 'root',
-        'PASSWORD': '********',
+        'PASSWORD': 'wambogas11999',
         'HOST': 'localhost',
         'PORT': '3306',        
     }
