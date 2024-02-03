@@ -55,52 +55,43 @@
         .add-to-cart-button:hover {
             background-color: #45a049;
         }
+
+        .caption{
+            padding: 10px;
+            text-align: center;
+        }
     </style>
 </head>
 
 <body>
-    <h1 class="w3-center w3-blue w3-xxxlarge">Category</h1>
+    <h1 class="w3-center w3-blue w3-xxxlarge">{{ category_name }} Category</h1>
     <div class="container">
         <div class="row">
+            {% for cat in categories%}
             <div class="col-md-4">
                 <div class="card">
-                    <img src="item1.jpg" alt="Item 1" style="width: 100%" />
+                    <img src="{{ cat.Prod_Image.url }}" alt="{{ cat.Prod_Name }}" style="width: 100%" />
                     <div class="overlay">
                         <div class="overlay-content">
-                            <h3>Item 1</h3>
-                            <p>$19.99</p>
+                            <h3>{{ cat.Prod_Name }}</h3>
+                            <p>Ksh. {{ cat.Pod_Price }}</p>
                             <button class="buy-button">Buy Now</button>
                             <button class="add-to-cart-button">Add to Cart</button>
                         </div>
                     </div>
+                    <div class="caption">
+                        <h4>{{ cat.Prod_Name }} Description</h4>
+                        <p>
+                            {{cat.Pod_Description}}
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="item2.jpg" alt="Item 2" style="width: 100%" />
-                    <div class="overlay">
-                        <div class="overlay-content">
-                            <h3>Item 2</h3>
-                            <p>$24.99</p>
-                            <button class="buy-button">Buy Now</button>
-                            <button class="add-to-cart-button">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="item3.jpg" alt="Item 3" style="width: 100%" />
-                    <div class="overlay">
-                        <div class="overlay-content">
-                            <h3>Item 3</h3>
-                            <p>$14.99</p>
-                            <button class="buy-button">Buy Now</button>
-                            <button class="add-to-cart-button">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
+
+
+
+    
         </div>
     </div>
 </body>

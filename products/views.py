@@ -12,3 +12,8 @@ def home(request):
     }
     
     return render(request, "products/index.html", context)
+
+def category_page(request, cat_id):
+    categories = Product.objects.filter(Category=cat_id)
+    category_name = Prod_Category.objects.filter(pk=cat_id).first()
+    return render(request, "products/category.html", {'categories' : categories, 'category_name': category_name})
