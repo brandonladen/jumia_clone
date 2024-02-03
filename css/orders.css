@@ -1,0 +1,38 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.account-overview{
+    position: relative;
+    bottom: 50px;
+    margin-top: 100px;
+}
+.orders-options{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-top: 15px;
+
+}
+.orders-options a{
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.orders-open a{
+    padding: 20px;
+    border-bottom: 2px solid gold;
+    color: gold;
+}
+.orders-closed a{
+    color: black;
+}
+.orders-body {
+    align-items: center;
+    text-align: center;
+    margin-left: 30%;
+    margin-top: 20%;
+    margin-bottom: 10%;
+}
