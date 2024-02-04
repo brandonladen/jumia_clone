@@ -19,7 +19,7 @@ This project is a Jumia clone, a website designed to showcase and sell various p
 - Django: A high-level Python web framework for rapid development.
 - HTML, CSS, JavaScript: Front-end technologies for building the user interface.
 - Bootstrap: Front-end framework for responsive and visually appealing design.
-- SQLite: Database system for storing product and user information.
+- MySQL: Database system for storing product and user information.
 - Git: Version control for collaborative development.
 
 ## Getting Started
