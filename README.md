@@ -25,8 +25,8 @@ This project is a Jumia clone, a website designed to showcase and sell various p
 ## Getting Started
 
 1. Clone the repository: `git clone https://github.com/brandonladen/jumia-clone.git`
-2. `cd jumia-clone`
-3. create your virtual environment python -m venv name_of_environment
+2. Change your directory `cd jumia-clone`
+3. create your virtual environment `python -m venv name_of_environment`
 4. start virtual environment
 5. run pip install -r requirements.txt
 6. run python manage.py makemigrations
