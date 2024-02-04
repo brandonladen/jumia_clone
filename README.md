@@ -36,7 +36,7 @@ This project is a Jumia clone, a website designed to showcase and sell various p
 
 ## Contributors
 
-    1. PETER OKECH <okechpj@gmain.com>
+    1. PETER OKECH <okechpj@gmail.com>
     2. BRANDON ODHIAMBO <brandonladen486@gmail.com>
-    3. CLIFFORD MUKOSH <*******@gmain.com>
-    4. SILAS MORACHA <********@gmain.com>
+    3. CLIFFORD MUKOSH <*******@gmail.com>
+    4. SILAS MORACHA <********@gmail.com>
