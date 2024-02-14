@@ -39,4 +39,4 @@ This project is a Jumia clone, a website designed to showcase and sell various p
     1. PETER OKECH <okechpj@gmail.com>
     2. BRANDON ODHIAMBO <brandonladen486@gmail.com>
     3. CLIFFORD MUKOSH <*******@gmail.com>
-    4. SILAS MORACHA <********@gmail.com>
+    4. SILAS MORACHA <morachasilas@gmail.com>
