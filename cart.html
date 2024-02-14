@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <style>
+        .product-card {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            position: relative;
+        }
+        
+        .remove-btn {
+            color: red;
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        
+        .quantity-control {
+            display: flex;
+            align-items: center;
+        }
+        
+        .quantity-btn {
+            cursor: pointer;
+        }
+        
+        #search_section {
+            display: inline;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="w3-blue w3-center">Here is how your cart looks like</h1>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-8">
+                <div class="product-card w3-card-4">
+                    <button class="remove-btn"><i class="fas fa-times"></i></button>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img src="C:/Users/HP/Downloads/beef-bread-buns-1633578.jpg" alt="Product Image" style="max-width: 100%" />
+                        </div>
+                        <div class="col-md-6">
+                            <h4>Product Name</h4>
+                            <p>Description of the product goes here.</p>
+                            <div class="quantity-control">
+                                <button class="quantity-btn">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                                <span>1</span>
+                                <button class="quantity-btn">
+                    <i class="fas fa-plus"></i>
+                  </button>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <p>$50</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more product cards here -->
+            </div>
+            <div class="col-md-4">
+                <div class="product-card w3-card-4">
+                    <h4>Cart Summary</h4>
+                    <p>Total: $150</p>
+                    <button class="btn btn-success">Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
