@@ -51,7 +51,7 @@
             <a href="{% url 'profile' %}" class="text-dark fs-1 m-2 w3-xxlarge"><i class="bi bi-person-fill"></i> </a>
         </div>
     </header>
-
+<h2>{{ request.user.id }} {{ request.user.username }}</h2>
     {% block content %}
     {% endblock content %}
 
