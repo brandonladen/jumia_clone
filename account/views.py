@@ -22,7 +22,6 @@ def Customer_signUp(request):
         
 
 def Customer_login(request):
-
     if request.method == 'POST':
         form = CustomerLoginForm(request.POST)
         if form.is_valid():
