@@ -3,6 +3,7 @@ from .models import Customer
 from .forms import CustomerCreationForm, CustomerLoginForm
 from django.contrib.auth import login,logout,authenticate
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.urls import reverse
 
 # Create your views here.
@@ -44,5 +45,6 @@ def logout_user(request):
     messages.success(request, 'Successfully logged out.')
     return redirect('login')
 
+@login_required
 def profile(request):
     return render(request, 'account/profile.html')

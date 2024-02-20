@@ -44,7 +44,7 @@
             <a href="{% url 'profile' %}" class="fa fa-user text-dark fs-1 m-2 w3-xxlarge"></a>
         </div>
     </header>
-
+<h2>{{ request.user.id }} {{ request.user.username }}</h2>
     {% block content %}
     {% endblock content %}
 
