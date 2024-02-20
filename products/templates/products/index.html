@@ -67,7 +67,7 @@
                 <div class="row">
                     {% for item in products %}
                         {% ifchanged item.Category %}
-                            <div class="col-12 mb-3">
+                            <div class="col-12">
                                 <div class="card">
                                     <div class="card-header">
                                         <div class="card-header-text">
@@ -115,7 +115,8 @@
                                 <div class="product">
                                     <img class="card-image" src="{{ product.display_img }}" alt="">   
                                     <div class="prod-desc">
-                                        <p>{{ product.Prod_Name }}</p>
+                                        <h3 style="color: orange;">{{ product.Prod_Name }}</h3>
+                                        <p><b>Ksh.{{ product.Pod_Price }}</b></p>
                                     </div>                         
                                 </div>
                             {% endif %}

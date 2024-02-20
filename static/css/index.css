@@ -58,7 +58,7 @@ body{
 }
 
 .product-body{
-   margin-top: 250px;
+  
 }
 .card{
     margin-bottom: 20px;
@@ -68,7 +68,9 @@ body{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
+}
+.product{
+    padding: 20px;
 }
 @media only screen and (max-width){
     .product-phone{
@@ -78,8 +80,11 @@ body{
         justify-content: space-between;
     }
 }
+
 .card-image {
     width: 150px;
+    padding-left: 20px;
+ 
 }
 .card-header{
     color: black;
@@ -103,6 +108,7 @@ body{
     padding-left: 15px;
     padding-right: 15px;
 }
+
 .recommendations-card{
     display: flex;
     flex-direction: row;
