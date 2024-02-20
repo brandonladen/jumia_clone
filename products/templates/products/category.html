@@ -75,8 +75,7 @@
                         <div class="overlay-content">
                             <h3>{{ cat.Prod_Name }}</h3>
                             <p>Ksh. {{ cat.Pod_Price }}</p>
-                            <button class="buy-button">Buy Now</button>
-                            <button class="add-to-cart-button">Add to Cart</button>
+                            <a href="{% url 'cart' cat.id %}" class="add-to-cart-button">Add to Cart</a>
                         </div>
                     </div>
                     <div class="caption">
