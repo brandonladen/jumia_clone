@@ -30,7 +30,8 @@ def add_to_cart(request, prod_id):
         user = request.user,
         Product_ID = product,
     )
-    return messages.success(request, "Successfully Added to cart!")
+    messages.success(request, "Successfully Added to cart!")
+    return redirect('view_cart')
 
 def remove_from_cart(request, prod_id):
     my_cart = Order.objects.filter(Product_ID=prod_id)
