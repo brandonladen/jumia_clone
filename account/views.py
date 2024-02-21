@@ -42,7 +42,8 @@ def Customer_login(request):
 
 def logout_user(request):
     logout(request)
-    return redirect('login')
+    return redirect(reverse('login'))
+    #return redirect('login')
 
 @login_required
 def profile(request):
