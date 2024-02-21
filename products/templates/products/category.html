@@ -61,12 +61,6 @@
             text-align: center;
         }
     </style>
-    <script>
-        // Redirect to another URL after a delay (e.g., 3 seconds)
-        setTimeout(function() {
-            window.location.href = '{{ category }}';
-        }, 3000);  // 3000 milliseconds = 3 seconds
-    </script>
 </head>
 
 <body>
@@ -81,7 +75,7 @@
                         <div class="overlay-content">
                             <h3>{{ cat.Prod_Name }}</h3>
                             <p>Ksh. {{ cat.Pod_Price }}</p>
-                            <a href="{% url 'cart' cat.id %}" class="add-to-cart-button" onclick = "alert('Added Successfully!')">Add to Cart</a>
+                            <a href="{% url 'cart' cat.id %}" class="add-to-cart-button">Add to Cart</a>
                         </div>
                     </div>
                     <div class="caption">
