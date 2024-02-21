@@ -34,5 +34,9 @@ def add_to_cart(request, prod_id):
 
 @login_required
 def view_cart(request):
+    total_price = 0
     my_cart = Order.objects.filter(user=request.user.id)
-    return render(request, "products/cart.html", {"my_cart": my_cart})
+    print(my_cart)
+    for items in my_cart:
+        total_price += items.Product_ID.Pod_Price
+    return render(request, "products/cart.html", {"my_cart": my_cart, "total_price": total_price})
