@@ -32,6 +32,12 @@ def add_to_cart(request, prod_id):
     )
     return messages.success(request, "Successfully Added to cart!")
 
+def remove_from_cart(request, prod_id):
+    my_cart = Order.objects.filter(Product_ID=prod_id)
+    messages.success(request, f"Successfully deleted {my_cart.first()}!")
+    my_cart.delete()
+    return redirect('view_cart')
+
 @login_required
 def view_cart(request):
     total_price = 0
