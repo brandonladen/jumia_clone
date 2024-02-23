@@ -47,6 +47,9 @@
                                 <label for="email"><strong>Email:</strong></label>
                                 <input type="email" class="form-control" id="email" value="{{ request.user.email }}" readonly>
                             </div>
+                            <a href="{% url 'update_profile' request.user.id %}">
+                            <button class = "btn btn-primary"> Update Profile</button>
+                            </a>
                         </div>
                     </div>
                     

@@ -42,7 +42,6 @@
                 {%for items in my_cart%}
                 <div class="product-card w3-card-4">
                     <a href="{% url 'delete_from_cart' items.Product_ID.id %}"><button class="remove-btn"><i class="fas fa-times"></i></button></a>
-                    <p>ID is:{{ items.Product_ID.id }}</p>
                     <div class="row">
                         <div class="col-md-3">
                             <img src="{{ items.Product_ID.Prod_Image.url }}" alt="Product Image" style="max-width: 100%" />

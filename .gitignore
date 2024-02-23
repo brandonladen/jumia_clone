@@ -1,3 +1,4 @@
 env
 try.html
 settings.py
+db.sqlite3

@@ -52,7 +52,7 @@
         <div class="header-icons">
             <a href="{% url 'view_cart' %}" class="text-dark fs-1 m-2 w3-xxlarge"><i class="bi bi-cart4"></i> </a>
             <a href="{% url 'profile' %}" class="text-dark fs-1 m-2 w3-xxlarge"><i class="bi bi-person-fill"></i> </a>
-            <p><small>Welcome:<br><b> {{ request.user.username }}</b></small></p>
+            <p><small>Welcome:<br><b> {{ request.user.first_name }} {{ request.user.last_name }}</b></small></p>
         </div>
     </header>
   <!-- Display messages -->
