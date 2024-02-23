@@ -12,7 +12,7 @@ def home(request):
     products = Product.objects.all().order_by('Category')  
     
     if search_query:
-        products = products.filter(Q(Prod_Name__icontains=search_query),Q( Category__icontains=search_query),Q(Pod_Description__icontains=search_query))
+        products = products.filter(Q(Prod_Name__icontains=search_query),Q(Pod_Description__icontains=search_query))
     
     context = {
         'products': products,
