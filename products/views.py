@@ -3,15 +3,19 @@ from .models import Prod_Category, Product, Order
 import uuid
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+from django.db.models import Q
 # Create your views here.
 
 @login_required
 def home(request):
-    products_all = Product.objects.all()
-    products = Product.objects.all().order_by('Category')
+    search_query = request.GET.get('search', '').strip()
+    products = Product.objects.all().order_by('Category')  
+    
+    if search_query:
+        products = products.filter(Q(Prod_Name__icontains=search_query),Q( Category__icontains=search_query),Q(Pod_Description__icontains=search_query))
+    
     context = {
         'products': products,
-        'products_all' : products_all,
     }
     
     return render(request, "products/index.html", context)

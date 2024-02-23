@@ -57,83 +57,41 @@ body{
 }
 
 .product-body{
-  margin-top: 100px;
-  border: 2px solid black;
+   
+    margin-top: 190px;
 }
-.card{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.product-card{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-.product{
+.card-products{
     padding: 20px;
+    background-color: white;
+    margin-left: 4px;
+    width: 1090px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
-@media only screen and (max-width){
-    .product-phone{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-    }
+.card-products img{
+    width: 100px;
 }
-
 .card-header{
-    color: black;
-    background-color: lightblue;
-    font-weight: bolder;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    background-color: lightblue;
+    width: 1090px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 .card-link a{
-    text-decoration: none;
+    color: orange;
+    font-weight: bold;
     list-style-type: none;
-    color: black;
+    text-decoration: none;
 }
-
-.product:hover{
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-}
-.product{
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
 .recommendations-card{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    text-align: center;
 }
-img{
-width: 200px;
-width: 200px;
-}
-
-
-.messages {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.messages li {
+.recommendations-card img{
+    width: 180px;
     padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
-
-.success {
-    background-color: #dff0d8;
-    border-color: #d6e9c6;
-    color: #3c763d;
 }
