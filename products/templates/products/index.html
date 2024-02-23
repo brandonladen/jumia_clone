@@ -93,7 +93,9 @@
                                         <h5 class="card-title">{{item.Prod_Name}}</h5>
                                         <p class="card-text"><b>Ksh.{{item.Pod_Price}}</b></p>
                                     </div>
+                                    <a href="{% url 'cart' item.id %}">
                                     <button class="btn btn-warning">Add to Cart</button>
+                                    <a>
                                 </div>
                                
                             </div>
