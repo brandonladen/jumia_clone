@@ -11,30 +11,29 @@
     background-color: orange;
 }
 #logo img{
-    width: 120px;
-    margin-left: 50px;
-  
+    width: 100px;
 }
 .nav-search{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding-right: 130px;
     border: none;
+    margin-right: 20px;
 }
 #nav-bar:focus{
     border-color: transparent;
 }
 #nav-bar{
     padding-left: 37px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-   
+    padding-top: 20px;
+    padding-bottom: 20px;
+  
 }
+
 .nav-search i{
     position: absolute;
-    right: 72%;
+    right: 73%;
 }
 
 .nav-search .btn{
@@ -45,14 +44,17 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin-right: 50px;
+    margin-right: 50px;   
+}
+.header-icons p{
+    
+    margin-top: 20px;
 }
 .header-icons i{
     padding-right: 20px;
     padding-left: 20px;
-   
     border-radius: 7px;
-    font-size: 40px;
+    font-size: 30px;
    
 }
 .header-icons i:hover{
