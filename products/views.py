@@ -12,13 +12,23 @@ def home(request):
     products = Product.objects.all().order_by('Category')  
     
     if search_query:
-        products = products.filter(Q(Prod_Name__icontains=search_query),Q(Pod_Description__icontains=search_query))
+        # Split the search query by whitespace into individual terms
+        search_terms = search_query.split()
+        
+        # Create a filter for each term in the search query
+        filters = Q()
+        for term in search_terms:
+            filters &= (Q(Prod_Name__icontains=term) | Q(Pod_Description__icontains=term))
+        
+        # Apply the combined filter to the queryset
+        products = products.filter(filters)
     
     context = {
         'products': products,
     }
     
     return render(request, "products/index.html", context)
+
 
 @login_required
 def category_page(request, cat_id):
