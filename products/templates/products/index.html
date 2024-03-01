@@ -71,14 +71,12 @@
                     {% for item in products %}
                         {% ifchanged item.Category %}
                             <div class="col-12" ><br>
-                                <div >
-                                    <div class="card-header">
-                                        <div class="card-header-text">
-                                            <b>Top Deals on {{item.Category}}</b>
-                                        </div>
-                                        <div class="card-link">
-                                            <a href="{% url 'category' item.Category.id %}">See more ></a>
-                                        </div>
+                                <div class="card-header">
+                                    <div class="card-header-text">
+                                        <b>Top Deals on {{item.Category}}</b>
+                                    </div>
+                                    <div class="card-link">
+                                        <a href="{% url 'category' item.Category.id %}">See more ></a>
                                     </div>
                                 </div>
                             </div>
@@ -87,17 +85,14 @@
                         
                         <div>
                             <div class="card-products">
-                                <div class="">
-                                    <img class="card-img-top p-2" src="{{item.display_img}}" alt="{{item.Prod_Name}}">
-                                    <div class="card-body" >
-                                        <h5 class="card-title">{{item.Prod_Name}}</h5>
-                                        <p class="card-text"><b>Ksh.{{item.Pod_Price}}</b></p>
-                                    </div>
-                                    <a href="{% url 'cart' item.id %}">
-                                    <button class="btn btn-warning">Add to Cart</button>
-                                    <a>
+                                <img class="card-img-top p-2" src="{{item.display_img}}" alt="{{item.Prod_Name}}">
+                                <div class="card-body " style="display: inline;" >
+                                    <h5 class="card-title">{{item.Prod_Name}}</h5>
+                                    <p class="card-text"><b>Ksh.{{item.Pod_Price}}</b></p>
                                 </div>
-                               
+                                <a href="{% url 'cart' item.id %}">
+                                <button class="btn btn-warning">Add to Cart</button>
+                                <a>
                             </div>
                         </div>
                     {% endfor %}
